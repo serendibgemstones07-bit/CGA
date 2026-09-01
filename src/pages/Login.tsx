@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Gem, Eye, EyeOff, AlertCircle } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
@@ -70,7 +70,12 @@ export function Login() {
             </div>
 
             <div>
-              <label className="label-text">Password</label>
+              <div className="flex items-center justify-between mb-1">
+                <label className="label-text mb-0">Password</label>
+                <Link to="/forgot-password" className="text-xs text-yellow-500 hover:underline">
+                  Forgot password?
+                </Link>
+              </div>
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
