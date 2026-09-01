@@ -12,6 +12,8 @@ import { ProfilePage } from './pages/ProfilePage';
 import { AdminManagement } from './pages/AdminManagement';
 import { InviteSignup } from './pages/InviteSignup';
 import { CatalogSharePage } from './pages/CatalogSharePage';
+import { ForgotPassword } from './pages/ForgotPassword';
+import { ResetPassword } from './pages/ResetPassword';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Routes>
           {/* Public routes */}
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/share/:token" element={<BuyerSharePage />} />
           <Route path="/invite/:token" element={<InviteSignup />} />
           <Route path="/catalog/:token" element={<CatalogSharePage />} />
